@@ -17,9 +17,9 @@ const SectionWithBoxes = () => {
           <li className="relative p-4 bg-blue-100 flex-1 space-y-2">
             <h4 className="text-2xl font-bold">Brand recognition</h4>
             <p>
-              Boost your brand recognition with each click. Generic links don't
-              mean a thing. Branded links help instill confidence in your
-              content.
+              Boost your brand recognition with each click. Generic links
+              don&apos;t mean a thing. Branded links help instill confidence in
+              your content.
             </p>
           </li>
           <li className="relative p-4 bg-blue-100 flex-1 mt-4 border-4 rounded-lg space-y-2">
