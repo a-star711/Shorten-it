@@ -1,6 +1,7 @@
 import Features from "@/app/features/page";
 import Pricing from "@/app/pricing/page";
 import Resources from "@/app/resourcess/page";
+import Logo from "./Logo";
 
 import {
   SignInButton,
@@ -10,16 +11,13 @@ import {
   SignUpButton,
   SignOutButton,
 } from "@clerk/nextjs";
-import Logo from "./Logo";
 
 const NavBar = () => {
   return (
     <nav className="border-b pt-4 px-4 flex justify-between items-center">
-      {/* Left side of the navbar */}
       <div className="flex items-center gap-8">
-        {/* Logo */}
         <Logo />
-        {/* Navigation Links */}
+
         <div className="flex gap-6">
           <Features />
           <Pricing />
@@ -27,7 +25,6 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Right side of the navbar */}
       <div className="flex items-center gap-6">
         <SignedOut>
           <SignInButton>
