@@ -140,7 +140,7 @@ const UrlShortener = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {originalUrl}
+                    {originalUrl.substring(0, 35)}
                   </Link>
                 </span>
 
