@@ -37,6 +37,7 @@ const UrlShortener = () => {
     setError(null);
 
     try {
+      console.log("We In the Request client side");
       const response = await fetch("/api/shorten", {
         method: "POST",
         headers: {
@@ -50,6 +51,8 @@ const UrlShortener = () => {
       if (!response.ok) {
         throw new Error(data.error || "Failed to shorten URL");
       }
+
+      console.log("data", data);
 
       setShortUrlArray((prevShortUrls) => {
         if (
