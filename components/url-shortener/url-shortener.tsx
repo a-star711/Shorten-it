@@ -23,7 +23,7 @@ const UrlShortener = () => {
     if (storedShortUrls) {
       setShortUrlArray(JSON.parse(storedShortUrls));
     }
-  }, []);
+  }, [inputUrl]);
 
   useEffect(() => {
     if (shortUrlArray.length > 0) {
@@ -37,7 +37,6 @@ const UrlShortener = () => {
     setError(null);
 
     try {
-      console.log("We In the Request client side");
       const response = await fetch("/api/shorten", {
         method: "POST",
         headers: {
@@ -51,8 +50,6 @@ const UrlShortener = () => {
       if (!response.ok) {
         throw new Error(data.error || "Failed to shorten URL");
       }
-
-      console.log("data", data);
 
       setShortUrlArray((prevShortUrls) => {
         if (
@@ -70,6 +67,7 @@ const UrlShortener = () => {
         sessionStorage.setItem("shortUrls", JSON.stringify(prevShortUrls));
         return prevShortUrls;
       });
+      setInputUrl("");
     } catch (err) {
       setError((err as Error).message);
     } finally {
