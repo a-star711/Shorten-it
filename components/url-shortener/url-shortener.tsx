@@ -23,7 +23,7 @@ const UrlShortener = () => {
     if (storedShortUrls) {
       setShortUrlArray(JSON.parse(storedShortUrls));
     }
-  }, [inputUrl]);
+  }, []);
 
   useEffect(() => {
     if (shortUrlArray.length > 0) {
